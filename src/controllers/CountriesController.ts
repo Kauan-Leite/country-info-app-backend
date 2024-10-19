@@ -22,7 +22,7 @@ export class CountriesController {
     try {
       const data = await NagerDateAPI.getAvailableCountries();
 
-      return response.status(HttpStatus.BAD_REQUEST).send({
+      return response.status(HttpStatus.OK).send({
         totalElements: data.length,
         countries: data,
       });
@@ -48,7 +48,7 @@ export class CountriesController {
       const populationInfo = await CountriesNowAPI.getPopulation(borderInfo.commonName);
       const flagInfo = await CountriesNowAPI.getFlag(borderInfo.commonName);
 
-      return response.status(HttpStatus.BAD_REQUEST).send({
+      return response.status(HttpStatus.OK).send({
         ...borderInfo,
         flag: flagInfo.data.flag,
         populationCounts: populationInfo.data.populationCounts,

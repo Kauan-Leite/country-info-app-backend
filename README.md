@@ -13,7 +13,7 @@
 
 Before starting, ensure you have the following tools installed on your machine:
 
-- [Node.js](https://nodejs.org/en/) (
+- [Node.js](https://nodejs.org/en/)
 - [Yarn](https://yarnpkg.com/)
 
 <br/><br/>
